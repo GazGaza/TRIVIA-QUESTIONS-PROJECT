@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Questions</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers&family=Roboto&display=swap" rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="gameBackground">
+            <div class="infoHeader">
+                <p id="categoryText" class="categoryText">Category : Habla Buda </p>
+                <p class="questionCounter">Question : <span id="questCounter">1</span></p>
+            </div>
+            <p id="questionText" class="questionText">&#8212;&#8212;Loading Question&#8212;&#8212;</p>
+            
+            <div class="lists"> 
+                <li>
+                    <input type="radio" class="big" id="Correct" name="answers" value="CORRECT">
+                    <label for="Correct">Correct</label>
+                </li>
+                <li>
+                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
+                    <label for="Wrong">Wrong</label>
+                </li>
+                <li>
+                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
+                    <label for="Wrong">Wrong</label>
+                </li>
+                <li>
+                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
+                    <label for="Wrong">Wrong</label>
+                </li>
+            </div>    
+            
+            
+            <div class="buttonsContainer">
+                <button id="endBtn" type="button">END</button>
+                <div class="time-left-bar" id="bar"></div>
+                <button onclick="NextButton()" id="nextBtn" type="button">NEXT</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

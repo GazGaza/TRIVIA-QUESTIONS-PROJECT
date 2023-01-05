@@ -6,29 +6,132 @@
     list-style-type: none;
 }
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers&family=Roboto&display=swap');
-h2,p,a{
+h2,p,a,span{
     font-family: 'Life Savers', cursive;
 }
 body{
     background-color: #E55D8E;
 }
 .gameBackground{
-    width: 68%;
-    height: 700px;
+    width: 50%;
     background-color: #FFD8D8;
     border-radius: 4%;
     box-shadow: 0px 0px 10px #000000;
     position: relative;
     top: 100px;
-    left: 15%;
+    left: 25%;
+    
 }
 .gameBackground h2{
-    width: 60%;
+    width: 70%;
     font-size: 48px;
-    color: #81E8FF;
-    text-shadow: 0px 0px 5px #000000;
+    color: #007893c1;
+    text-shadow: 0px 0px 5px #ffffff;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    padding: 30px;
 }
+.gameBackground p{
+    width: 50%;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    margin: 10px auto;
+}
+.gameBackground .startText{
+    padding-bottom: 200px;
+}
+.gameBackground a{
+    width: 20%;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    background-color: #E55D8E;
+    color: #007893c1;
+    text-shadow: 0px 0px 5px #ffffff;
+    position: absolute;
+    bottom: 14%;
+    left: 40%;
+    border-radius: 8%;
+}
+.gameBackground a:hover{
+    cursor: pointer;
+    background-color: #ed4582;
+    font-size: 34px;
+}
+.gameBackground .infoHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.gameBackground .infoHeader p{
+    font-size: 28px;
+    font-weight: 900;
+    width: 40%;
+    height: 90px;
+    color: #007893c1;
+    text-shadow: 0px 0px 5px #ffffff;
+    text-align: center;
+    padding-top: 20px;
+}
+.gameBackground .questionText{
+    width: 86%;
+    font-size: 26px;
+}
+
+.lists{
+    width: 95%;
+    margin: 20px auto;
+}
+.lists li{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+    padding-left: 80px;
+}
+.lists li input{
+    width: 30px;
+    height: 30px;
+}
+.lists li label{
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: 'Life Savers', cursive;
+}
+.buttonsContainer{
+    width: 70%;
+    margin: 30px auto;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttonsContainer button{
+    width: 100px;
+    height: 50px;
+    border-radius: 8%;
+    background-color: #E55D8E;
+    color: #007893c1;
+    text-shadow: 0px 0px 5px #ffffff;
+    font-size: 24px;
+    font-family: 'Life Savers', cursive;
+    font-weight: 900;
+    border: none;
+}
+.buttonsContainer button:hover{
+    cursor: pointer;
+    background-color: #ed4582;
+    font-size: 22px;
+}
+.time-left-bar {
+    height: 20px;
+    width: 150px;
+    background-color: green;
+  }
