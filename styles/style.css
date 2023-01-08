@@ -12,6 +12,9 @@ h2,p,a,span{
 body{
     background-color: #E55D8E;
 }
+#result{
+    display: none;
+}
 .gameBackground{
     width: 50%;
     background-color: #FFD8D8;
@@ -39,7 +42,7 @@ body{
     text-align: center;
     margin: 10px auto;
 }
-.gameBackground .startText{
+.gameBackground .startText, #resultText{
     padding-bottom: 200px;
 }
 .gameBackground a{
@@ -96,9 +99,21 @@ body{
     align-items: center;
     padding-left: 80px;
 }
+@keyframes moveList {
+    0%{
+        padding-left: 80px;
+    }
+    50%{
+        padding-left: 70px;
+    }
+    100%{
+        padding-left: 80px;
+    }
+}
 .lists li input{
     width: 30px;
     height: 30px;
+    accent-color: #ed4582;
 }
 .lists li label{
     padding-left: 10px;

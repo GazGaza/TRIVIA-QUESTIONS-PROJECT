@@ -13,7 +13,7 @@
 </head>
 <body>
     <main>
-        <div class="gameBackground">
+        <div id="gameplay" class="gameBackground">
             <div class="infoHeader">
                 <p id="categoryText" class="categoryText">Category : Habla Buda </p>
                 <p class="questionCounter">Question : <span id="questCounter">1</span></p>
@@ -22,29 +22,31 @@
             
             <div class="lists"> 
                 <li>
-                    <input type="radio" class="big" id="Correct" name="answers" value="CORRECT">
-                    <label for="Correct">Correct</label>
+                    <input type="radio" class="big" name="answers" value="">
                 </li>
                 <li>
-                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
-                    <label for="Wrong">Wrong</label>
+                    <input type="radio" class="big" name="answers" value="">
                 </li>
                 <li>
-                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
-                    <label for="Wrong">Wrong</label>
+                    <input type="radio" class="big" name="answers" value="">
                 </li>
                 <li>
-                    <input type="radio" class="big" id="Wrong"   name="answers" value="WRONG">
-                    <label for="Wrong">Wrong</label>
+                    <input type="radio" class="big" name="answers" value="">
                 </li>
             </div>    
             
             
             <div class="buttonsContainer">
-                <button id="endBtn" type="button">END</button>
+                <button onclick="gameOver()" id="endBtn" type="button">END</button>
                 <div class="time-left-bar" id="bar"></div>
                 <button onclick="NextButton()" id="nextBtn" type="button">NEXT</button>
             </div>
+        </div>
+
+        <div id="result" class="gameBackground">
+            <h2>GAME OVER</h2>
+            <p id="resultText"></p>
+            <a href="gameplay.html">PLAY AGAIN</a>
         </div>
     </main>
 </body>
