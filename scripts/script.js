@@ -7,7 +7,7 @@ let wrongAnswersList;
 let playerScore = 0;
 let timeLeft = 30;
 let sworiPas;
-fetch("https://opentdb.com/api.php?amount=10")
+fetch("https://opentdb.com/api.php?amount=10&category=24&difficulty=easy")
 .then(fetched => fetched.json(fetched))
 .then(parsed => {
     tenQuestionArr = parsed.results;
@@ -50,17 +50,20 @@ function randNumb(min, max) {
 function NextButton() {
   let radios = document.getElementsByName("answers");
   let uncheckedArr = [];
+  
   for(let i = 0; i < radios.length; i++){
     if(radios[i].checked == false){
       uncheckedArr.push(radios[i]);
     }
   }
+
   if(uncheckedArr.length == 3){
     const labels = document.querySelectorAll('label');
-  labels.forEach(label => {
+    labels.forEach(label => {
     const parent = label.parentNode;
     parent.removeChild(label);
   });
+
 
   for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
@@ -70,15 +73,15 @@ function NextButton() {
       }
       radios[i].checked = false;
     }
-  timeLeft = 30;
-}
+    timeLeft = 30;
+  }
 
-questionCounter = parseInt(questionCounter)+1;
-document.getElementById("questCounter").innerHTML = questionCounter;
-newQuestion();
-if(questionCounter >= 10){
-  gameOver();
-}
+  questionCounter = parseInt(questionCounter)+1;
+  document.getElementById("questCounter").innerHTML = questionCounter;
+  newQuestion();
+    if(questionCounter >= 10){
+      gameOver();
+    }
   }
 }
 
