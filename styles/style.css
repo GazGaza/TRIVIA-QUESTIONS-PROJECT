@@ -18,12 +18,11 @@ body{
 .gameBackground{
     width: 50%;
     background-color: #FFD8D8;
-    border-radius: 4%;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px #000000;
     position: relative;
     top: 100px;
     left: 25%;
-    
 }
 .gameBackground h2{
     width: 70%;
@@ -43,7 +42,7 @@ body{
     margin: 10px auto;
 }
 .gameBackground .startText, #resultText{
-    padding-bottom: 200px;
+    padding-bottom: 240px;
 }
 .gameBackground a{
     width: 20%;
@@ -55,9 +54,44 @@ body{
     color: #007893c1;
     text-shadow: 0px 0px 5px #ffffff;
     position: absolute;
-    bottom: 14%;
+    bottom: 20px;
     left: 40%;
-    border-radius: 8%;
+    border-radius: 10px;
+}
+.ctgrContainer{
+    width: 60%;
+    position: absolute;
+    bottom: 120px;
+    left: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #E55D8E;
+    border-radius: 10px;
+}
+.ctgrContainer p{
+    width: 80%;
+    color: #007893c1;
+    text-shadow: 0px 0px 5px #ffffff;
+    font-size: 36px;
+    font-weight: 900;
+    font-family: 'Life Savers', cursive;
+    text-align: center;
+}
+.ctgrContainer button{
+    width: 40px;
+    height: 40px;
+    background-color: #007893c1;
+    font-size: 30px;
+    color: #E55D8E;
+    text-shadow: 0px 0px 5px #ffffff;
+    border-radius: 10px;
+    margin: 10px;
+}
+.ctgrContainer button:hover{
+    cursor: pointer;
+    font-size: 20px;
 }
 .gameBackground a:hover{
     cursor: pointer;
@@ -85,6 +119,7 @@ body{
 .gameBackground .questionText{
     width: 86%;
     font-size: 26px;
+    padding-top: 20px;
 }
 
 .lists{
@@ -131,7 +166,7 @@ body{
 .buttonsContainer button{
     width: 100px;
     height: 50px;
-    border-radius: 8%;
+    border-radius: 10px;
     background-color: #E55D8E;
     color: #007893c1;
     text-shadow: 0px 0px 5px #ffffff;
@@ -147,6 +182,53 @@ body{
 }
 .time-left-bar {
     height: 20px;
-    width: 150px;
-    background-color: green;
-  }
+    width: 70%;
+    margin: 10px auto;
+    background-color: #ed4582;
+    border-radius: 10px;
+    border: 4px dotted #007893c1;
+}
+@media only screen and (max-width:400px) {
+    .gameBackground{
+        width: 90%;
+        left: 5%;
+        top: 40px;
+    }
+    .gameBackground h2{
+        font-size: 30px;
+    }
+    .gameBackground p{
+        width: 90%;
+        font-size: 24px;
+    }
+    .ctgrContainer{
+        width: 90%;
+        left: 5%;
+    }
+    .gameBackground a{
+        width: 50%;
+        left: 25%;
+        font-size: 28px;
+    }
+    .gameBackground .infoHeader p{
+        font-size: 20px;
+    }
+    .gameBackground .questionText{
+        font-size: 22px;
+    }
+    .lists li{
+        width: 100%;
+        padding-left: 20px;
+    }
+    .lists li input{
+        width: 50px;
+    }
+    .lists li label{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .time-left-bar{
+        width: 70%;
+        margin: 10px auto;
+    }
+}

@@ -9,16 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers&family=Roboto&display=swap" rel="stylesheet">
-    
+    <script type="module" src="scripts/categoryChooser.js" defer></script>
 </head>
 <body>
     <main>
         <div class="gameBackground">
-            <h2>Trivia Questions From Politics Category</h2>
+            <h2>Trivia Questions</h2>
             <p class="startText">
                 " try to get max correct answers from 10 question
                 you have 30sec for each question good luck :) "
             </p>
+            <div class="ctgrContainer">
+                <button id="leftBtn">&lt;</button>
+                <p id="choosedCtgry" class="choosedCategory">Choose Category</p>
+                <button id="rightBtn">&gt;</button>
+            </div>
             <a href="gameplay.html">START</a>
         </div>
     </main>

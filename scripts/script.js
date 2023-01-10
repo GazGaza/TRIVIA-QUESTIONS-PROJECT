@@ -1,13 +1,39 @@
 const questionText = document.getElementById("questionText");
 const categoryText = document.getElementById("categoryText");
+const endBtn = document.getElementById("endBtn");
+const nextBtn = document.getElementById("nextBtn");
 let questionCounter = document.getElementById("questCounter").innerHTML;
 let bar = document.getElementById("bar");
 let tenQuestionArr;
-let wrongAnswersList;
 let playerScore = 0;
 let timeLeft = 30;
 let sworiPas;
-fetch("https://opentdb.com/api.php?amount=10&category=24&difficulty=easy")
+
+function setCategoryNum(){
+  let result = 0;
+  switch(parseInt(localStorage.getItem("number"))){
+    case 0:
+      result = 15;
+      break;
+    case 1:
+      result = 19;
+      break;
+    case 2:
+      result = 24;
+      break;
+    case 3:
+      result = 12;
+      break;   
+    case 4:
+      result = 21;
+      break;      
+    case 5:
+      result = 23;
+      break;  
+  }
+  return result;
+}
+fetch(`https://opentdb.com/api.php?amount=10&category=${setCategoryNum()}&type=multiple`)
 .then(fetched => fetched.json(fetched))
 .then(parsed => {
     tenQuestionArr = parsed.results;
@@ -47,7 +73,7 @@ function randNumb(min, max) {
 //next gilakze dacheris shemdeg gamoidzaxeba NextButton funqcia romelic amowmebs swors pasuxs da tvirtavs axal pasuxs
 //aseve monishnul gilaks mounishnavze abrunebs da motamashis qulas ertit zrdis romelic kitxvebis  
 //amowurvis shemdeg chndeba ekranze da timers sawyis droze abrunebs
-function NextButton() {
+nextBtn.addEventListener("click",()=>{
   let radios = document.getElementsByName("answers");
   let uncheckedArr = [];
   
@@ -83,7 +109,7 @@ function NextButton() {
       gameOver();
     }
   }
-}
+})
 
 function printWrongAnswers(){
   let wrongAnswerInputs = document.getElementsByClassName("big");
@@ -102,6 +128,9 @@ function printWrongAnswers(){
     }
 }
 
+endBtn.addEventListener("click",()=>{
+  gameOver();
+})
 function gameOver(){
   document.getElementById("gameplay").style.display = "none";
   document.getElementById("result").style.display = "block";
@@ -110,7 +139,7 @@ function gameOver(){
 
 let timer = setInterval(() => {
   timeLeft--;
-  bar.style.width = timeLeft / 30 * 150 + "px";
+  bar.style.width = timeLeft / 30 * 70 + "%";
   if (timeLeft === 0) {
     gameOver();
   }

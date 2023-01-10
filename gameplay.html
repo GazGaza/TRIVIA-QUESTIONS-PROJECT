@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Life+Savers&family=Roboto&display=swap" rel="stylesheet">
-    <script src="scripts/script.js" defer></script>
+    
 </head>
 <body>
     <main>
@@ -35,11 +35,11 @@
                 </li>
             </div>    
             
+            <div class="time-left-bar" id="bar"></div>
             
             <div class="buttonsContainer">
-                <button onclick="gameOver()" id="endBtn" type="button">END</button>
-                <div class="time-left-bar" id="bar"></div>
-                <button onclick="NextButton()" id="nextBtn" type="button">NEXT</button>
+                <button id="endBtn" type="button">END</button>
+                <button id="nextBtn" type="button">NEXT</button>
             </div>
         </div>
 
@@ -49,5 +49,6 @@
             <a href="gameplay.html">PLAY AGAIN</a>
         </div>
     </main>
+    <script type="module" src="scripts/script.js" defer></script>
 </body>
 </html>
